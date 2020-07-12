@@ -6,4 +6,4 @@ before_install:
   - docker build -t Heiwi/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run Heiwi/docker-react npm run test -- --coverage
+  - docker run -e CI=true heiwi/docker-react npm run test
